@@ -15,7 +15,10 @@ public class MainSql {
        contact.setCustomerId(6);
        contact.setFirstName("Alex");
        contact.setLastName("Hiper");
-
+       contact.setEmail("alex@mail.ru");
+       contact.setPhone("89325562254");
+       contact.setHireDate("1985-03-16");
+       contact.setJobid("IPid");
 
         var entityManagerFactory = Persistence.createEntityManagerFactory("postgres");
         EntityManager em = entityManagerFactory.createEntityManager();
