@@ -12,6 +12,7 @@ public class MainSql {
 
        Contact contact = new Contact();
 
+       contact.setId(6L);
        contact.setCustomerId(6);
        contact.setFirstName("Alex");
        contact.setLastName("Hiper");

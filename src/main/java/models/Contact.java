@@ -1,12 +1,13 @@
 package models;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @Table(name = "\"Contacts\"")
 public class Contact {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -36,7 +37,7 @@ public class Contact {
     }
 
     public void setid(Long id) {
-        this.id = id;
+        this.customerId = Math.toIntExact(id);
     }
 
     public Long getId() {
